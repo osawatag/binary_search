@@ -21,6 +21,6 @@ int main(){
 if(c > k) lb = z;
 else ub = z;
 }
-  printf("%d¥n",ub);
+  printf("%d\n",ub);
   return 0;
 }
