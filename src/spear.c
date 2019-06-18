@@ -18,6 +18,6 @@ int main(){
       if(A[m] >= k ) ub = m;
       else lb = m;
     }
-    printf("%d",ub);
+    printf("%d\n",ub);
   return 0;
 }
