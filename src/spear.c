@@ -4,6 +4,15 @@ int n;
 int k;
 int A[100000];
 
+int p(unsigned int z){
+  int i;
+  int c = 0;
+    for(i = 0;i < n;i++){
+      c = c + (A[i] / z);
+}
+  if(c >= k) return 1;
+  else return 0;
+}
 
 int main(){
   int i, lb, ub;
@@ -11,15 +20,11 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb = 1;
-  ub = 1000000000;
+  lb = 0;
+  ub = 2000000000;
   while(ub - lb > 1){
     int z = (ub + lb) /2;
-    int c = 0;
-      for(i = 0;i < n;i++){
-        c = c + (A[i] / z)     ;
-}
-if(c >= k) lb = z;
+if(p(z) == 1) lb = z;
 else ub = z;
 }
   printf("%d\n",lb);
